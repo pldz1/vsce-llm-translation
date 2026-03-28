@@ -2,11 +2,13 @@
   "name": "llm-translator",
   "displayName": "LLM Translator",
   "description": "大语言模型的文本翻译插件",
-  "version": "1.0.0",
+  "author": "pldz",
+  "publisher": "pldz",
+  "version": "1.0.8",
   "engines": {
     "vscode": "^1.85.0"
   },
-  "icon": "media//icon128.png",
+  "icon": "media/icon128.png",
   "categories": [
     "Other"
   ],
@@ -18,7 +20,7 @@
         {
           "id": "llm-translator",
           "title": "LLM Translator",
-          "icon": "media//icon48.png"
+          "icon": "media/icon48.png"
         }
       ]
     },
@@ -27,7 +29,8 @@
         {
           "type": "webview",
           "id": "llm-translator.panel",
-          "name": "LLM Translator"
+          "name": "LLM Translator",
+          "icon": "media/icon48.png"
         }
       ]
     },
@@ -44,7 +47,7 @@
     "keybindings": [
       {
         "command": "llm-translator.translate",
-        "key": "ctrl+shift+alt+t",
+        "key": "alt+t",
         "when": "editorTextFocus"
       },
       {
@@ -69,10 +72,14 @@
     "lint": "eslint src"
   },
   "devDependencies": {
-    "@types/vscode": "^1.85.0",
     "@types/node": "22.x",
-    "typescript-eslint": "^8.56.1",
+    "@types/vscode": "^1.85.0",
     "eslint": "^9.39.3",
-    "typescript": "^5.9.3"
-  }
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1"
+  },
+  "dependencies": {
+    "vsce": "^2.15.0"
+  },
+  "repository": "https://github.com/pldz1/vsce-llm-translation"
 }
