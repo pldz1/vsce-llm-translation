@@ -4,7 +4,7 @@
   "description": "大语言模型的文本翻译插件",
   "author": "pldz",
   "publisher": "pldz",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "engines": {
     "vscode": "^1.85.0"
   },

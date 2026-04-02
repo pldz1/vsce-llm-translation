@@ -16,7 +16,9 @@ export function activate(context: vscode.ExtensionContext) {
 
   const panelProvider = new TranslatorPanel(context.extensionUri, storage);
   context.subscriptions.push(
-    vscode.window.registerWebviewViewProvider(TranslatorPanel.viewType, panelProvider)
+    vscode.window.registerWebviewViewProvider(TranslatorPanel.viewType, panelProvider, {
+      webviewOptions: { retainContextWhenHidden: true },
+    })
   );
 
   // ── 编辑器内悬浮翻译结果 ────────────────────────────────────────────────────

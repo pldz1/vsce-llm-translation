@@ -370,7 +370,7 @@ export class TranslatorPanel implements vscode.WebviewViewProvider {
     <div class="collapsible-content">
       <div class="row" style="margin-bottom:6px;">
         <label for="new-mode-label-input">模式名称</label>
-        <input id="new-mode-label-input" placeholder="例如：会议纪要助手" />
+        <input id="new-mode-label-input" placeholder="例如：英译日、代码注释翻译" />
       </div>
       <div class="row textarea-button">
         <textarea id="new-mode-prompt-textarea" placeholder="填写提示词，使用 {{text}} 表示原文内容"></textarea>

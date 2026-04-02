@@ -2,21 +2,23 @@
 
 基于大语言模型的 VS Code 文本翻译插件，支持中英互译、文本润色及自定义翻译模式。
 
+![preview](./doc/preview.png)
+
 ## 功能特性
 
 - **侧边栏配置面板** — 在 Activity Bar 中点击图标即可打开，配置 API 参数与翻译模式
 - **编辑器右键翻译** — 选中文本后右键菜单点击"翻译选中的文本"
-- **快捷键翻译** — `Ctrl+Shift+Alt+T` 翻译当前选中文本
+- **快捷键翻译** — `Alt+T` 翻译当前选中文本
 - **结果浮层展示** — 翻译完成后自动在选区位置弹出 Hover 窗口展示结果
 - **替换文本模式** — 勾选"替换文本"后，翻译结果直接替换选中内容
 - **自定义翻译模式** — 支持新增、编辑、删除自定义提示词模式
 
 ## 内置翻译模式
 
-| 模式 | 说明 |
-|------|------|
-| 中英互译 | 自动识别语言，中译英或英译中 |
-| 中英润色 | 将文本润色为专业、严谨的正式文档风格，并列出修改说明 |
+| 模式     | 说明                                 |
+| -------- | ------------------------------------ |
+| 中英互译 | 自动识别语言，中译英或英译中         |
+| 中英润色 | 将文本润色为专业、严谨的正式文档风格 |
 
 ## 使用方法
 
@@ -24,12 +26,12 @@
 
 点击左侧 Activity Bar 中的 **LLM Translator** 图标打开配置面板，填写以下参数：
 
-| 字段 | 说明 |
-|------|------|
+| 字段     | 说明                                            |
+| -------- | ----------------------------------------------- |
 | 终端节点 | LLM API 的请求地址，支持 `{{modelName}}` 占位符 |
-| API Key | 你的 API 密钥（加密存储） |
-| 模型名称 | 可选，例如 `gpt-4o`、`claude-3-5-sonnet` |
-| 翻译模式 | 选择内置模式或自定义模式 |
+| API Key  | 你的 API 密钥（加密存储）                       |
+| 模型名称 | 可选，例如 `gpt-4o`                             |
+| 翻译模式 | 选择内置模式或自定义模式                        |
 
 **终端节点示例：**
 
@@ -46,7 +48,7 @@ https://your-endpoint/openai/deployments/{{modelName}}/chat/completions
 **方式一：编辑器快捷操作**
 
 1. 在编辑器中选中需要翻译的文本
-2. 按 `Ctrl+Shift+Alt+T` 或右键选择「翻译选中的文本 (LLM Translation)」
+2. 按 `Alt+T` 或右键选择「翻译选中的文本 (LLM Translation)」
 3. 状态栏显示"翻译中..."，完成后自动弹出 Hover 窗口展示结果
 
 **方式二：侧边栏面板**
@@ -61,9 +63,9 @@ https://your-endpoint/openai/deployments/{{modelName}}/chat/completions
 
 ## 快捷键
 
-| 快捷键 | 功能 |
-|--------|------|
-| `Ctrl+Shift+Alt+T` | 翻译选中文本 |
+| 快捷键             | 功能                     |
+| ------------------ | ------------------------ |
+| `Alt+T`            | 翻译选中文本             |
 | `Ctrl+Shift+Alt+L` | 打开 LLM Translator 面板 |
 
 ## 自定义翻译模式
@@ -82,13 +84,4 @@ https://your-endpoint/openai/deployments/{{modelName}}/chat/completions
 
 ## 兼容的 API
 
-任何兼容 OpenAI Chat Completions 格式的接口均可使用，例如：
-
-- OpenAI API
-- Azure OpenAI
-- Anthropic Claude（通过兼容层）
-- 本地部署的 Ollama、LM Studio 等
-
-## 许可证
-
-MIT
+任何兼容 OpenAI Chat Completions 格式的接口均可使用
